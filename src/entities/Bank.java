@@ -39,9 +39,10 @@ public class Bank {
 		for (Client cliente : this.client) {
 		out += "Cliente: " + cliente.getName() 
 			+ "\nAniversario: " + cliente.getBirthDate().toString()
-			+ "\nAge: " + cliente.getAge() + "\n";
+			+ "\nAge: " + cliente.getAge() + "\n"
+			+ "\nConta: " + cliente.getConta().getId();
 		}
-		return "Bank [name=" + name + ", client=" + client + "]";
+		return out;
 	}
 	
 	

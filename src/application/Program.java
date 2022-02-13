@@ -1,10 +1,15 @@
 package application;
 
+import entities.Bank;
+
 public class Program {
 
 	public static void main(String[] args) {
 		
-		System.out.println("hello world");
+		Bank bank = new Bank("DIOBank");
+		
+		System.out.println(bank);
+		
 	}
 
 }

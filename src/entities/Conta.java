@@ -3,22 +3,24 @@ package entities;
 import interfacies.IConta;
 
 public abstract class Conta implements IConta{
+		
+	private static Integer id = 1;
 	
-	private Integer id;
+	private Double saldo;
 	
 	public Conta() {
-	}
-
-	public Conta(Integer id) {
-		this.id = id;
 	}
 
 	public Integer getId() {
 		return id;
 	}
-
-	public void setId(Integer id) {
-		this.id = id;
+	
+	public static Integer newId() {
+		return ++id;
 	}
 
+	public double getSaldo() {
+		return saldo;
+	}
+	
 }
