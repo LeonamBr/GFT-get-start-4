@@ -1,33 +1,28 @@
 package entities;
 
-import java.util.Objects;
-
 import interfacies.IConta;
 
-public class ContaPoupanca extends Conta implements IConta{
+public class ContaCorrente extends Conta implements IConta{
 
 	private Integer id;
 	
 	private Double saldo;
 	
-	public ContaPoupanca() {
+	public ContaCorrente() {
 	}
 		
-	public ContaPoupanca(double saldo) {
+	public ContaCorrente(Double saldo) {
+		super();
 		this.id = Conta.newId();
 		this.saldo = saldo;
 	}
-
+	
 	public Integer getId() {
 		return id;
 	}
 
 	public double getSaldo() {
 		return saldo;
-	}
-
-	public void setSaldo(Double saldo) {
-		this.saldo = saldo;
 	}
 
 	@Override
@@ -44,23 +39,6 @@ public class ContaPoupanca extends Conta implements IConta{
 	@Override
 	public void sacar(Double value) {
 		saldo -= value;		
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		ContaPoupanca other = (ContaPoupanca) obj;
-		return Objects.equals(id, other.id);
 	}
 
 }

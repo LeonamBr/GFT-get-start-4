@@ -1,5 +1,7 @@
 package entities;
 
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +10,8 @@ public class Bank {
 	private String name;
 	
 	private List<Client> client = new ArrayList<>();
+	
+	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/YYYY").withZone(ZoneId.of("UTC"));
 	
 	public Bank() {
 	}
@@ -37,10 +41,10 @@ public class Bank {
 		String out = "";
 		out += "Bank: " + name;
 		for (Client cliente : this.client) {
-		out += "Cliente: " + cliente.getName() 
-			+ "\nAniversario: " + cliente.getBirthDate().toString()
-			+ "\nAge: " + cliente.getAge() + "\n"
-			+ "\nConta: " + cliente.getConta().getId();
+		out += "\n\nConta: " + cliente.getConta().getId()
+			+ "\nCliente: " + cliente.getName()
+			+ "\nAniversario: " + formatter.format(cliente.getBirthDate())
+			+ "\nAge: " + cliente.getAge();
 		}
 		return out;
 	}

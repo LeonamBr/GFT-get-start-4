@@ -16,7 +16,7 @@ public abstract class Conta implements IConta{
 	}
 	
 	public static Integer newId() {
-		return ++id;
+		return id++;
 	}
 
 	public double getSaldo() {
