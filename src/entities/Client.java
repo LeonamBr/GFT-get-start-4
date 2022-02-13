@@ -2,6 +2,8 @@ package entities;
 
 import java.time.Instant;
 
+import enums.ContaType;
+
 public class Client {
 	
 	private String name;
@@ -40,6 +42,10 @@ public class Client {
 
 	public Integer getAge() {
 		return age;
+	}
+	
+	public ContaType getType() {
+		return getConta().getType();
 	}
 
 	public void setAge(Integer age) {

@@ -41,10 +41,11 @@ public class Bank {
 		String out = "";
 		out += "Bank: " + name;
 		for (Client cliente : this.client) {
-		out += "\n\nConta: " + cliente.getConta().getId()
+		out += "\n\nConta: " + cliente.getConta().getId() + "\tTipo: " + cliente.getType().toString()
 			+ "\nCliente: " + cliente.getName()
 			+ "\nAniversario: " + formatter.format(cliente.getBirthDate())
-			+ "\nAge: " + cliente.getAge();
+			+ "\nAge: " + cliente.getAge()
+			+ "\nSaldo: " + cliente.getConta().getSaldo();
 		}
 		return out;
 	}

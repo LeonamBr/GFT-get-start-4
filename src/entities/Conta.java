@@ -1,5 +1,6 @@
 package entities;
 
+import enums.ContaType;
 import interfacies.IConta;
 
 public abstract class Conta implements IConta{
@@ -7,6 +8,8 @@ public abstract class Conta implements IConta{
 	private static Integer id = 1;
 	
 	private Double saldo;
+	
+	private ContaType type;
 	
 	public Conta() {
 	}
@@ -22,5 +25,10 @@ public abstract class Conta implements IConta{
 	public double getSaldo() {
 		return saldo;
 	}
+	
+	public ContaType getType() {
+		return type;
+	}
+
 	
 }

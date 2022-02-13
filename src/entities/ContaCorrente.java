@@ -1,5 +1,6 @@
 package entities;
 
+import enums.ContaType;
 import interfacies.IConta;
 
 public class ContaCorrente extends Conta implements IConta{
@@ -8,11 +9,12 @@ public class ContaCorrente extends Conta implements IConta{
 	
 	private Double saldo;
 	
+	private ContaType type = ContaType.CORRENTE;
+	
 	public ContaCorrente() {
 	}
 		
 	public ContaCorrente(Double saldo) {
-		super();
 		this.id = Conta.newId();
 		this.saldo = saldo;
 	}
@@ -23,6 +25,10 @@ public class ContaCorrente extends Conta implements IConta{
 
 	public double getSaldo() {
 		return saldo;
+	}
+
+	public ContaType getType() {
+		return type;
 	}
 
 	@Override

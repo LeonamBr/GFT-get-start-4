@@ -2,6 +2,7 @@ package entities;
 
 import java.util.Objects;
 
+import enums.ContaType;
 import interfacies.IConta;
 
 public class ContaPoupanca extends Conta implements IConta{
@@ -9,6 +10,8 @@ public class ContaPoupanca extends Conta implements IConta{
 	private Integer id;
 	
 	private Double saldo;
+	
+	private ContaType type = ContaType.POUPANCA;
 	
 	public ContaPoupanca() {
 	}
@@ -28,6 +31,10 @@ public class ContaPoupanca extends Conta implements IConta{
 
 	public void setSaldo(Double saldo) {
 		this.saldo = saldo;
+	}
+	
+	public ContaType getType() {
+		return type;
 	}
 
 	@Override
@@ -49,8 +56,8 @@ public class ContaPoupanca extends Conta implements IConta{
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
-	}
-
+	}	
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
