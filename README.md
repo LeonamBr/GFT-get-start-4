@@ -1,10 +1,10 @@
 # GTF-get-start-4
 
-##Repositório para projeto do desafio GTF get start #4
+## Repositório para projeto do desafio GTF get start #4
 
-###Criando um banco digital para projeto GTF
+### Criando um banco digital para projeto GTF
 
-###O softwware conta com as funções
+### O softwware conta com as funções
 
 #### ■ Criar conta corrente
 #### ■ Criar conta poupança
