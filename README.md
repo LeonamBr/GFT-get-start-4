@@ -14,4 +14,4 @@
 #### ■ Transferir
 
 
-### o Codigo já vem com configuração inicial para não precisar ficar adicionando contas.
+### O código já vem com configuração inicial para não precisar ficar adicionando contas.
